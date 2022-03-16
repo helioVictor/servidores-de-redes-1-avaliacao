@@ -23,7 +23,7 @@ GET_PARTIONS_INFO=$(df -h | grep -v 'loop' | awk 'NR>1 {printf "%s %s %s\n",$2, 
 # Get total of bytes and packets transferred and received (bytes)
 GET_INTERFACES_INFO=$(cat /proc/net/dev | awk 'NR>2 {printf "%s %s %s %s %s\n",$1, $2, $3, $10, $11}')
 
-echo "$GET_TIME" >> $FILENAME
+echo $GET_TIME >> $FILENAME
 echo $GET_HOSTNAME >> $FILENAME
 echo $GET_TOTAL_MEMORY_USED >> $FILENAME
 echo $GET_TOTAL_MEMORY_AVALIABLE >> $FILENAME

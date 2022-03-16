@@ -1,7 +1,7 @@
 #!/bin/bash
 
 current_dir=$(pwd)
-source ${current}/handle_data.sh
+source ${current_dir}/handle_data.sh
 
 generate_content_file () {
     if [ ! -f 'content_file.txt' ]; then
@@ -9,7 +9,13 @@ generate_content_file () {
     fi
 }
 
-generate_html_body () {
+generate_content_file_html () {
+    if [ ! -f 'content_file.html' ]; then
+        $(touch content_file.html)
+    fi
+}
+
+generate_index_html () {
     # INDEX_PATH='/var/www/html'
     if [ ! -f 'index.html' ]; then
         $(touch index.html)
@@ -27,7 +33,6 @@ generate_html_body () {
         rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
         crossorigin="anonymous"
     >
-    <link rel="stylesheet" href="myProjects/webProject/icofont/css/icofont.min.css">
     <title>Hellio - Sistema de monitoramento</title>
     <style>
         body {
@@ -77,7 +82,6 @@ generate_maintenance_html_body () {
 </head>
 <body>
     <div class="m-3 d-flex align-items-center flex-column">
-        <i class="icofont-warning"></i>
         <h1>Página em manutenção</h1>
         <p>00:00h - 06:00h</p>
     <div>

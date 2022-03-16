@@ -1,7 +1,7 @@
 .vagrant
 *.log
-/content_file.html
-/index.html
-/content_file.txt
-/maintenance.html
+content_file.html
+index.html
+content_file.txt
+maintenance.html
 cron.output
