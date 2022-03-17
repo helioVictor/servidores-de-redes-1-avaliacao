@@ -2,6 +2,6 @@
 *.log
 content_file.html
 index.html
+maintenance_file.html
 content_file.txt
-maintenance.html
 cron.output

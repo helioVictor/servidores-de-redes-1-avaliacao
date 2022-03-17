@@ -61,11 +61,11 @@ END
 }
 
 generate_maintenance_html_body () {
-    if [ ! -f 'maintenance.html' ]; then
-        $(touch maintenance.html)
+    if [ ! -f 'maintenance_file.html' ]; then
+        $(touch maintenance_file.html)
     fi
     
-    cat > maintenance.html << END
+    cat > maintenance_file.html << END
 <!DOCTYPE html>
 <html lang="en">
 <head>
